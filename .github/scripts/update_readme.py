@@ -23,11 +23,11 @@ def get_issue_data():
     # Parse issue body to extract blog information
     body = issue['body']
     
-    # Updated regex patterns to match the new issue template format
-    blog_name_match = re.search(r'### 博客名称\s*(.*?)(?=###|$)', body, re.DOTALL)
-    blog_url_match = re.search(r'### 博客链接\s*(.*?)(?=###|$)', body, re.DOTALL)
-    blog_author_match = re.search(r'### 作者\s*(.*?)(?=###|$)', body, re.DOTALL)
-    blog_focus_match = re.search(r'### 主要领域\s*(.*?)(?=###|$)', body, re.DOTALL)
+    # Updated regex patterns to match the form field format
+    blog_name_match = re.search(r'### 博客名称\n\n(.*?)(?=\n\n|$)', body, re.DOTALL)
+    blog_url_match = re.search(r'### 博客链接\n\n(.*?)(?=\n\n|$)', body, re.DOTALL)
+    blog_author_match = re.search(r'### 作者\n\n(.*?)(?=\n\n|$)', body, re.DOTALL)
+    blog_focus_match = re.search(r'### 主要领域\n\n(.*?)(?=\n\n|$)', body, re.DOTALL)
     
     # Add error checking for each field
     if not all([blog_name_match, blog_url_match, blog_author_match, blog_focus_match]):

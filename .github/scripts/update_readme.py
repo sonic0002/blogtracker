@@ -17,23 +17,39 @@ def get_issue_data():
     response = requests.get(url, headers=headers)
     issue = response.json()
     
+    # Debug print to see the actual issue body format
+    print("Issue body:", issue['body'])
+    
     # Parse issue body to extract blog information
     body = issue['body']
-    match = re.search(r'博客名称:\s*(.+)', body)
-    if match:
-        blog_name = match.group(1)
-    else:
-        raise ValueError("Blog name not found in issue body")
-    blog_url = re.search(r'博客链接:\s*(.+)', body).group(1)
-    blog_author = re.search(r'作者:\s*(.+)', body).group(1)
-    blog_focus = re.search(r'主要领域:\s*(.+)', body).group(1)
     
-    return {
-        'name': blog_name,
-        'url': blog_url,
-        'author': blog_author,
-        'focus': blog_focus
+    # Updated regex patterns to match the new issue template format
+    blog_name_match = re.search(r'### 博客名称\s*(.*?)(?=###|$)', body, re.DOTALL)
+    blog_url_match = re.search(r'### 博客链接\s*(.*?)(?=###|$)', body, re.DOTALL)
+    blog_author_match = re.search(r'### 作者\s*(.*?)(?=###|$)', body, re.DOTALL)
+    blog_focus_match = re.search(r'### 主要领域\s*(.*?)(?=###|$)', body, re.DOTALL)
+    
+    # Add error checking for each field
+    if not all([blog_name_match, blog_url_match, blog_author_match, blog_focus_match]):
+        missing_fields = []
+        if not blog_name_match: missing_fields.append("博客名称")
+        if not blog_url_match: missing_fields.append("博客链接")
+        if not blog_author_match: missing_fields.append("作者")
+        if not blog_focus_match: missing_fields.append("主要领域")
+        raise ValueError(f"Missing required fields: {', '.join(missing_fields)}")
+    
+    # Clean up the extracted text (remove extra whitespace and newlines)
+    blog_data = {
+        'name': blog_name_match.group(1).strip(),
+        'url': blog_url_match.group(1).strip(),
+        'author': blog_author_match.group(1).strip(),
+        'focus': blog_focus_match.group(1).strip()
     }
+    
+    # Debug print to verify extracted data
+    print("Extracted blog data:", blog_data)
+    
+    return blog_data
 
 def update_readme():
     with open('README.md', 'r', encoding='utf-8') as f:

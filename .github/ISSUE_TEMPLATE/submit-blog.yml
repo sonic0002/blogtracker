@@ -3,10 +3,6 @@ description: 提交一个新的技术博客
 title: "[新博客]: "
 labels: ["new-blog"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        感谢您提交新的技术博客！请填写以下信息：
   - type: input
     id: blog-name
     attributes:
@@ -33,12 +29,5 @@ body:
     attributes:
       label: 主要领域
       placeholder: 例如：前端、JavaScript、技术评论
-    validations:
-      required: true
-  - type: textarea
-    id: blog-introduction
-    attributes:
-      label: 用一句话介绍一下写博客初衷和推荐理由
-      placeholder: 例如：我写博客是为了分享我的学习经验和见解。
     validations:
       required: true 

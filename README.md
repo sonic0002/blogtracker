@@ -15,6 +15,7 @@
 | 阮一峰的网络日志 | [https://www.ruanyifeng.com/blog/](https://www.ruanyifeng.com/blog/) | 阮一峰 | 前端、JavaScript、技术评论 |
 | 酷 壳 | [https://coolshell.cn/](https://coolshell.cn/) | 陈皓(左耳朵耗子) | 系统架构、编程语言、技术思考 |
 
+| 卡瓦邦噶！ | [https://www.kawabangga.com/](https://www.kawabangga.com/) | laixintao | 技术, 编程, 个人反思 |
 ## 如何贡献
 
 ### 方式一：通过 Issue 提交（推荐）

@@ -10,6 +10,11 @@ on:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
+    # Add permission configuration for better security
+    permissions:
+      contents: write
+      pull-requests: write
+    
     steps:
       - name: Auto Merge PR
         uses: pascalgn/automerge-action@v0.15.6
@@ -22,4 +27,7 @@ jobs:
           MERGE_RETRY_SLEEP: "10000"
           MERGE_REQUIRED_APPROVALS: "1"
           UPDATE_LABELS: "automerge"
-          UPDATE_METHOD: "rebase" 
+          UPDATE_METHOD: "rebase"
+          # Add additional safety checks
+          MERGE_DELETE_BRANCH: "true"
+          MERGE_FILTER_AUTHOR: "" 

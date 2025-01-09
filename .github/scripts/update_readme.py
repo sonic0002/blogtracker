@@ -19,7 +19,11 @@ def get_issue_data():
     
     # Parse issue body to extract blog information
     body = issue['body']
-    blog_name = re.search(r'博客名称:\s*(.+)', body).group(1)
+    match = re.search(r'博客名称:\s*(.+)', body)
+    if match:
+        blog_name = match.group(1)
+    else:
+        raise ValueError("Blog name not found in issue body")
     blog_url = re.search(r'博客链接:\s*(.+)', body).group(1)
     blog_author = re.search(r'作者:\s*(.+)', body).group(1)
     blog_focus = re.search(r'主要领域:\s*(.+)', body).group(1)

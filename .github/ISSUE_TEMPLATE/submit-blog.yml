@@ -1,0 +1,37 @@
+name: 提交新博客
+description: 提交一个新的技术博客
+title: "[新博客]: "
+labels: ["new-blog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提交新的技术博客！请填写以下信息：
+  - type: input
+    id: blog-name
+    attributes:
+      label: 博客名称
+      placeholder: 例如：阮一峰的网络日志
+    validations:
+      required: true
+  - type: input
+    id: blog-url
+    attributes:
+      label: 博客链接
+      placeholder: 例如：https://www.ruanyifeng.com/blog/
+    validations:
+      required: true
+  - type: input
+    id: blog-author
+    attributes:
+      label: 作者
+      placeholder: 例如：阮一峰
+    validations:
+      required: true
+  - type: input
+    id: blog-focus
+    attributes:
+      label: 主要领域
+      placeholder: 例如：前端、JavaScript、技术评论
+    validations:
+      required: true 

@@ -56,14 +56,21 @@ def update_readme():
         content = f.read()
     
     blog_data = get_issue_data()
-    new_row = f"| {blog_data['name']} | [{blog_data['url']}]({blog_data['url']}) | {blog_data['author']} | {blog_data['focus']} |"
     
-    # Find the table and add the new row
-    table_pattern = r'(\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|[\r\n]+)((?:\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|[\r\n]+)*)'
-    replacement = f'\\1\\2{new_row}\n'
+    # Format the URL as a proper markdown link
+    # Add newline at the end to maintain table formatting
+    new_row = f"| {blog_data['name']} | [{blog_data['url']}]({blog_data['url']}) | {blog_data['author']} | {blog_data['focus']} |\n"
+    
+    # Find the table in README.md
+    # Match the header and existing entries
+    table_pattern = r'(\| 博客名称 \| 链接 \| 作者 \| 主要领域 \|\n\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|\n)((?:\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|\n)*)'
+    
+    # Add the new row after the header and existing entries
+    replacement = f'\\1\\2{new_row}'
     
     updated_content = re.sub(table_pattern, replacement, content)
     
+    # Write the updated content back to README.md
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write(updated_content)
 

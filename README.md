@@ -16,6 +16,7 @@
 | 酷 壳 | [https://coolshell.cn/](https://coolshell.cn/) | 陈皓(左耳朵耗子) | 系统架构、编程语言、技术思考 |
 | 卡瓦邦噶！ | [https://www.kawabangga.com/](https://www.kawabangga.com/) | laixintao | 技术, 编程, 个人反思 |
 | Skywind Inside | [https://skywind.me/blog/guest](https://skywind.me/blog/guest) | 韦易笑 | Linux,AI |
+| 云风的 BLOG | [https://blog.codingnow.com/](https://blog.codingnow.com/) | 云风 | 游戏开发，编程技术，个人思考 |
 
 ## 如何贡献
 

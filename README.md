@@ -17,6 +17,7 @@
 | 卡瓦邦噶！ | [https://www.kawabangga.com/](https://www.kawabangga.com/) | laixintao | 技术, 编程, 个人反思 |
 | Skywind Inside | [https://skywind.me/blog/guest](https://skywind.me/blog/guest) | 韦易笑 | Linux,AI |
 | 云风的 BLOG | [https://blog.codingnow.com/](https://blog.codingnow.com/) | 云风 | 游戏开发，编程技术，个人思考 |
+| MacTalk-池建强的随想录 | [https://macshuo.com/](https://macshuo.com/) | 池建强 | 技术，写作，创业 |
 
 ## 如何贡献
 

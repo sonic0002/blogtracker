@@ -19,6 +19,7 @@
 | 云风的 BLOG | [https://blog.codingnow.com/](https://blog.codingnow.com/) | 云风 | 游戏开发，编程技术，个人思考 |
 | MacTalk-池建强的随想录 | [https://macshuo.com/](https://macshuo.com/) | 池建强 | 技术，写作，创业 |
 | manateelazycat | [https://manateelazycat.github.io/](https://manateelazycat.github.io/) | Andy Stewart | Emacs，Linux 操作系统，自驾探险 |
+| Manjusaka - 写代码的香港记者 | [https://www.manjusaka.blog/](https://www.manjusaka.blog/) | Manjusaka | 编程，Python，人生 |
 
 ## 如何贡献
 

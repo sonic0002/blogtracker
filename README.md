@@ -21,6 +21,7 @@
 | manateelazycat | [https://manateelazycat.github.io/](https://manateelazycat.github.io/) | Andy Stewart | Emacs，Linux 操作系统，自驾探险 |
 | Manjusaka - 写代码的香港记者 | [https://www.manjusaka.blog/](https://www.manjusaka.blog/) | Manjusaka | 编程，Python，人生 |
 | piglei | [https://www.piglei.com/](https://www.piglei.com/) | piglei | Python 工程实践，软件设计思考 |
+| laike9m's blog | [https://laike9m.com/](https://laike9m.com/) | laike9m | AI 工具, 独立开发, 技术体验, 写作思考, 开源项目 |
 
 ## 如何贡献
 

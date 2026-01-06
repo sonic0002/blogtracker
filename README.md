@@ -23,6 +23,7 @@
 | piglei | [https://www.piglei.com/](https://www.piglei.com/) | piglei | Python 工程实践，软件设计思考 |
 | laike9m's blog | [https://laike9m.com/](https://laike9m.com/) | laike9m | AI 工具, 独立开发, 技术体验, 写作思考, 开源项目 |
 | Scateu Blog - S.B. | [https://scateu.me/](https://scateu.me/) | Wang Kang | Vim、网络、硬件折腾 |
+| 枫林灯语 | [https://blog.mfwt.top/](https://blog.mfwt.top/) | 墨枫梧桐 | 随笔，科技 ，网络 ，无线电 |
 
 ## 如何贡献
 
